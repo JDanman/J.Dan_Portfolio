@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Fotos</title>
+    <!-- Importar Hoja de Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importación de Fuentes Tipográficas de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Kiwi+Maru&family=Mochiy+Pop+One&family=RocknRoll+One&family=Shippori+Mincho+B1&family=Zen+Kaku+Gothic+New&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Encabezado del sitio -->
+    <header>
+        <h1>PICTURE SHOW ! ! !</h1>
+        <p>J.Danman is proud to present a little demonstraton of his work.</p>
+    </header>
+    <!-- Barra de navegación con enlaces -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="slider.html">Photos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider-item">
+                    <img src="./images/imgs/marble 01.jpg" alt="Imagen 1">
+                </div>
+                <div class="slider-item">
+                    <img src="./images/imgs/marble 02.jpg" alt="Imagen 2">
+                </div>
+                <div class="slider-item">
+                    <img src="./images/imgs/marble 03.jpg" alt="Imagen 3">
+                </div>
+                <div class="slider-item">
+                    <img src="./images/imgs/marble 04.jpg" alt="Imagen 4">
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </main>
+
+    <!-- Pie de página del sitio -->
+    <footer>
+        <p>&copy; 2024 My first website</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function showSlides() {
+            const slides = document.querySelectorAll(".slider-item");
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides.forEach((slide, index) => {
+                slide.style.display = index === slideIndex ? "block" : "none";
+            });
+            setTimeout(() => {
+                slideIndex++;
+                showSlides();
+            }, 3000); // Cambia la imagen cada 2 segundos
+        }
+    </script>
+</body>
+
+</html>
