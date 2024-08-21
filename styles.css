@@ -9,8 +9,9 @@ body {
     /* Color de fondo del sitio web */
     background-color: #6b2223;
     background-image: url("https://get.wallhere.com/photo/dark-wall-symmetry-pattern-texture-circle-vintage-interior-design-background-lighting-design-line-darkness-wallpaper-decor-textile-583028.jpg");
-    
-    /*background-size: cover;*/
+    background-size: cover; /* Asegura que la imagen cubra todo el "body" */
+    background-attachment: fixed; /* Mantiene la imagen estática */
+
     background-blend-mode: multiply;
 
     text-align: center;
@@ -90,6 +91,7 @@ main {
     /* Relleno interno del contenido principal */
     padding: 1rem;
     padding-bottom: 7%;
+    margin-bottom: 2em;
 }
 
 /* Estilos para el pie de página */

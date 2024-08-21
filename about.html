@@ -27,6 +27,46 @@
     <!-- https://animate.style/ CSS/JS Animation Library Import -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
+    <style>
+        .skills-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Asignar un espacio entre las dos columnas */
+            max-width: 75%; /* Limita el ancho de las columnas en la página */
+            margin: auto; /* centra en la página el contenedor con las dos columna automaticamente */
+            box-sizing: border-box; /* Asegura que "padding" y "border" se incluyan en el ancho */
+            margin: 1em auto 1em; /* Espacio entre las habilidades y las secciones previa y posterior */
+        }
+
+        .column {
+            flex: 1;
+            max-width: 450px;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center; /* Alinea los textos de manera vertical*/
+            margin-bottom: 0.5em; /* Espacio entre cada habilidad enlistada */
+        }
+
+        .skill .description {
+            flex: 1; /* Fuerza a "description" a tomar el espacio disponible */
+            text-align: left; /* Alinea WdescriptionW a la izquierda */
+        }
+
+        .skill .rating {
+            margin-left: 0.25em; /* Valor que Ajusta el espacio entre "skill" y "rating" */
+        }
+
+        .column h2 {
+            margin-top: 0;
+        }
+
+        .column p {
+            margin-bottom: 1em;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -61,37 +101,70 @@
     <!-- Contenido principal de la página -->
     <main>
         <section>
-            <h2>Who am I?</h2>
-            <p>
-                My Name is Jesús Daniel Pérez García, from Victoria de Durango, Dgo., Mexico since the 90's.<br>
-                Software Engineer from the Unipoli, class of 2018, with four years of experience as Software Analyst, <br>
-                I am now working as a freelance Digital Designer, soon to be certified from the UTD, class of 2025.
-            </p>
-            <p>
-                <h2>Designing Skills</h2>
-                Sketching ★☆☆☆☆ (1.5)<br>
-                Photo Shooting & Editing ★★★★☆ (04)<br>
-                Advertising Edition ★★★☆☆ (03)<br>
-                Vector Illustration ★★★☆☆ (03)<br>
-                3D Modelling & Rendering ★★★☆☆ (3.5)<br>
-            </p>
-            <p>
-                <h2>Language Skills</h2>
-                Spanish  ★★★★★ (Native)<br>
-                English  ★★★★★ (C1)<br>
-                Japanese ★★★☆☆ (Intermediate)<br>
-                French   ★☆☆☆☆ (Basic)<br>
-            </p>
-        </section>
-        <img src="./images/profile-02.jpg" alt="Profile Picture" width="294" height="314">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fjesusdaniel.perezgarcia%2Fvideos%2F424830936848135%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-        <!--
-        <iframe width="560" height="314" src="https://www.youtube.com/embed/RY58t1R15mU?si=GAilD06FMH18LpeF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        -->
-    
-        <div>
+            <div>
+                <h2>Who am I?</h2>
+                <p>
+                    My Name is Jesús Daniel Pérez García, from Victoria de Durango, Dgo., Mexico since the 90's.<br>
+                    Software Engineer from the Unipoli, class of 2018, with four years of experience as Software Analyst, <br>
+                    I am now working as a freelance Digital Designer, soon to be certified from the UTD, class of 2025.
+                </p>
+            </div>
 
-        </div>
+            <div class="profile" style="margin: 1.5em auto 1em;">
+                <img src="./images/profile-02.jpg" alt="Profile Picture" width="294" height="314">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fjesusdaniel.perezgarcia%2Fvideos%2F424830936848135%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                <!--
+                <iframe width="560" height="314" src="https://www.youtube.com/embed/RY58t1R15mU?si=GAilD06FMH18LpeF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                -->
+            </div>
+
+            <div class="skills-container">
+
+                <div class="column">
+                    <h2>Designing Skills</h2>
+                    <div class="skill">
+                        <div class="description">Sketching</div>
+                        <div class="rating">★☆☆☆☆ (1.5)</div>
+                    </div>
+                    <div class="skill">
+                        <div class="description">Photo Shooting & Editing</div>
+                        <div class="rating">★★★★☆ (04)</div>
+                    </div>
+                    <div class="skill">
+                        <div class="description">Advertising Edition</div>
+                        <div class="rating">★★★☆☆ (03)</div>
+                    </div>
+                    <div class="skill">
+                        <div class="description">Vector Illustration</div>
+                        <div class="rating">★★★☆☆ (03)</div>
+                    </div>
+                    <div class="skill">
+                        <div class="description">3D Modelling & Rendering</div>
+                        <div class="rating">★★★☆☆ (3.5)</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h2>Language Skills</h2>
+                    <div class="skill">
+                        <div class="description">Spanish</div>
+                        <div class="rating">★★★★★ (Native)</div>
+                    </div>
+                    <div class="skill">
+                        <div class="description">English</div>
+                        <div class="rating">★★★★★ (C1)</div>
+                    </div>
+                    <div class="skill">
+                        <div class="description">Japanese</div>
+                        <div class="rating">★★★☆☆ (Intermediate)</div>
+                    </div>
+                    <div class="skill">
+                        <div class="description">French</div>
+                        <div class="rating">★☆☆☆☆ (Basic)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div>
             <h2>Mindful for Some Ambiance?</h2>
